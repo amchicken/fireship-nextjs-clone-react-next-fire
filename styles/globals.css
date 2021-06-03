@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #eb6424;
+  --secondary-color: #fa9500;
+  --third-color: #ffdac6;
+  --forth-color: #babd8d;
+  --font-color: #1c1d21;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--forth-color);
+  color: var(--font-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 0.8rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+}
+
+.text-info {
+  color: var(--secondary-color);
+}
+
+.hidden {
+  display: none;
+}
+
+/* button */
+.btn {
+  border: none;
+  padding: 0.5rem 0.8rem;
+  font-weight: bold;
+  color: whitesmoke;
+  background: var(--font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn :hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+}
+
+/* card */
+.card {
+  padding: 0.5rem;
+  margin: 1rem 0;
+  background-color: whitesmoke;
+}
+
+.card footer {
+  font-size: 0.9rem;
+}
+
+/* navbar */
+.navbar {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  background-color: var(--third-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul li {
+  padding: 0 0.5rem;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+/* loader */
+.loader {
+  border: 10px solid transparent;
+  border-top: 10px solid var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

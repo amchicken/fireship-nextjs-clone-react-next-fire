@@ -1,0 +1,22 @@
+{
+  "name": "next-fire",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "firebase": "^8.6.3",
+    "lodash.debounce": "^4.0.8",
+    "lodash.kebabcase": "^4.1.1",
+    "next": "10.2.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-firebase-hooks": "^3.0.4",
+    "react-hook-form": "^6.15.5",
+    "react-hot-toast": "^2.0.0",
+    "react-markdown": "^6.0.2"
+  }
+}
