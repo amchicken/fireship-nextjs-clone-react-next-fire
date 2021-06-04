@@ -17,6 +17,7 @@
     "react-firebase-hooks": "^3.0.4",
     "react-hook-form": "^6.15.5",
     "react-hot-toast": "^2.0.0",
-    "react-markdown": "^6.0.2"
+    "react-markdown": "^6.0.2",
+    "react-time-ago": "^6.2.2"
   }
 }

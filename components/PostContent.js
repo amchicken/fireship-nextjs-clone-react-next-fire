@@ -1,12 +1,17 @@
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
-import { toFirebaseTimeStamp } from "@lib/firebase";
+import ReactTimeAgo from "react-time-ago";
+import TimeAgo from "javascript-time-ago";
+
+import en from "javascript-time-ago/locale/en";
+const SERVERTIME = 50400000;
+TimeAgo.addLocale(en);
 
 export default function PostContent({ post }) {
   const createdAt =
     typeof post?.createdAt === "number"
-      ? new Date(post.createdAt)
-      : new Date(post.createdAt.toMillis());
+      ? new Date(post.createdAt + SERVERTIME)
+      : new Date(post.createdAt.toMillis() + SERVERTIME);
   return (
     <div className="card">
       <h1>{post?.title}</h1>
@@ -17,7 +22,7 @@ export default function PostContent({ post }) {
           <a className="text-info">@{post.username}</a>
         </Link>
       </span>{" "}
-      on {createdAt.toISOString()}
+      on <ReactTimeAgo date={createdAt} locale="en" />
       <ReactMarkdown>{post?.content}</ReactMarkdown>
     </div>
   );

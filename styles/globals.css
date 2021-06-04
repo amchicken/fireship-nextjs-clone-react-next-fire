@@ -74,6 +74,10 @@ a {
   background: var(--secondary-color);
 }
 
+.btn-disabled {
+  filter: grayscale(50%);
+}
+
 /* card */
 .card {
   padding: 0.5rem;
