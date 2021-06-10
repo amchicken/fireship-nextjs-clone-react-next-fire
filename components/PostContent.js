@@ -4,14 +4,13 @@ import ReactTimeAgo from "react-time-ago";
 import TimeAgo from "javascript-time-ago";
 
 import en from "javascript-time-ago/locale/en";
-const SERVERTIME = 50400000;
 TimeAgo.addLocale(en);
 
 export default function PostContent({ post }) {
   const createdAt =
     typeof post?.createdAt === "number"
-      ? new Date(post.createdAt + SERVERTIME)
-      : new Date(post.createdAt.toMillis() + SERVERTIME);
+      ? new Date(post.createdAt)
+      : new Date(post.createdAt.toMillis());
   return (
     <div className="card">
       <h1>{post?.title}</h1>
